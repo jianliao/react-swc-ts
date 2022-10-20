@@ -1,5 +1,3 @@
-import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import { SpTheme } from '@swc-react-wrapper/theme';
 import { SpButton } from '@swc-react-wrapper/button';
@@ -14,20 +12,6 @@ function App() {
   return (
     <SpTheme theme="spectrum" scale="medium" color="light">
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
         <SpButton click={() => alert('Hello')}>
           <SpIconEdit slot="icon"></SpIconEdit>
           I will be back
@@ -36,7 +20,7 @@ function App() {
           <img
             slot="cover-photo"
             src="https://picsum.photos/200/300"
-            alt="Demo Image"
+            alt="demo"
           />
           <div slot="footer">Footer</div>
         </SpCard>
