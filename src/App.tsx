@@ -1,42 +1,43 @@
-import './App.css';
-import { SpTheme } from '@swc-react-wrapper/theme';
-import { SpButton } from '@swc-react-wrapper/button';
-import { SpCard } from '@swc-react-wrapper/card';
-import { SpRadio, SpRadioGroup } from '@swc-react-wrapper/radio';
-import { SpActionGroup } from '@swc-react-wrapper/action-group';
-import { SpActionButton } from '@swc-react-wrapper/action-button';
-import { SpProgressCircle } from '@swc-react-wrapper/progress-circle';
-import { SpIconEdit } from '@swc-react-wrapper/icons-workflow/IconEdit';
+import "./App.css";
+
+import { Theme } from "@swc-react/theme";
+import { Button } from "@swc-react/button";
+import { Card } from "@swc-react/card";
+import { Radio, RadioGroup } from "@swc-react/radio";
+import { ActionGroup } from "@swc-react/action-group";
+import { ActionButton } from "@swc-react/action-button";
+import { ProgressCircle } from "@swc-react/progress-circle";
+import { IconEdit } from "@swc-react/icons-workflow/Edit";
 
 function App() {
   return (
-    <SpTheme theme="spectrum" scale="medium" color="light">
+    <Theme theme="spectrum" scale="medium" color="light">
       <div className="App">
-        <SpButton click={() => alert('Hello')}>
-          <SpIconEdit slot="icon"></SpIconEdit>
-          I will be back
-        </SpButton>
-        <SpCard heading="Card Heading" subheading="JPG Photo">
+        <Button click={() => alert("Hello")}>
+          <IconEdit slot="icon"></IconEdit>Be right back
+        </Button>
+        <Card heading="Card Heading" subheading="JPG Photo">
           <img
             slot="cover-photo"
             src="https://picsum.photos/200/300"
             alt="demo"
           />
           <div slot="footer">Footer</div>
-        </SpCard>
-        <SpRadioGroup selected="first" name="example">
-          <SpRadio value="first">Option 1</SpRadio>
-          <SpRadio value="second">Option 2</SpRadio>
-          <SpRadio value="third">Option 3</SpRadio>
-          <SpRadio value="fourth">Option 4</SpRadio>
-        </SpRadioGroup>
-        <SpActionGroup selects="single" selected={["first"]}>
-          <SpActionButton value="first">First</SpActionButton>
-          <SpActionButton value="second">Second</SpActionButton>
-        </SpActionGroup>
-        <SpProgressCircle size='xxl' indeterminate />
+        </Card>
+        <RadioGroup selected="first" name="example">
+          <Radio value="first">Option 1</Radio>
+          <Radio value="second">Option 2</Radio>
+          <Radio value="third">Option 3</Radio>
+          <Radio value="fourth">Option 4</Radio>
+        </RadioGroup>
+        <ActionGroup selects="single" selected={["third"]}>
+          <ActionButton value="first">First</ActionButton>
+          <ActionButton value="second">Second</ActionButton>
+          <ActionButton value="third">Third</ActionButton>
+        </ActionGroup>
+        <ProgressCircle size="xxl" indeterminate />
       </div>
-    </SpTheme>
+    </Theme>
   );
 }
 
