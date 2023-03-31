@@ -10,8 +10,8 @@ import { ActionButton, ActionButtonType } from "@swc-react/action-button";
 import { ProgressCircle } from "@swc-react/progress-circle";
 import { IconEdit } from "@swc-react/icons-workflow/Edit";
 
-import '@spectrum-web-components/theme/theme-light.js';
-import '@spectrum-web-components/theme/scale-medium.js';
+import "@spectrum-web-components/theme/theme-light.js";
+import "@spectrum-web-components/theme/scale-medium.js";
 
 function App() {
   const handleChange = (e: Event) => {
@@ -19,34 +19,23 @@ function App() {
   };
   const handleClick = (e: React.MouseEvent<ActionButtonType>) => {
     console.log(e.currentTarget.selected);
-  }
+  };
   return (
     <Theme theme="spectrum" scale="medium" color="light">
       <div className="App">
-        <Button onClick={() => alert("Hello")}>
-          <IconEdit slot="icon"></IconEdit>Be right back
-        </Button>
-        <Card heading="Card Heading" subheading="JPG Photo">
-          <img
-            slot="cover-photo"
-            src="https://picsum.photos/200/300"
-            alt="demo"
-          />
-          <div slot="footer">Footer</div>
-        </Card>
         <RadioGroup selected="first" name="example">
           <Radio value="first">Option 1</Radio>
           <Radio value="second">Option 2</Radio>
           <Radio value="third">Option 3</Radio>
           <Radio value="fourth">Option 4</Radio>
         </RadioGroup>
-        <ActionGroup selects="single" selected={["third"]} change={handleChange}>
+        {/* <ActionGroup selects="single" selected={["third"]} change={handleChange}>
           <ActionButton value="first">First</ActionButton>
           <ActionButton value="second">Second</ActionButton>
           <ActionButton value="third">Third</ActionButton>
-        </ActionGroup>
-        <ProgressCircle size="xxl" indeterminate />
-        <ActionButton toggles change={handleChange} onClick={handleClick}>Toggle</ActionButton>
+        </ActionGroup> */}
+        {/* <ProgressCircle size="xxl" indeterminate />
+        <ActionButton toggles change={handleChange} onClick={handleClick}>Toggle</ActionButton> */}
       </div>
     </Theme>
   );
